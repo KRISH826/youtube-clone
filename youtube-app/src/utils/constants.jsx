@@ -1,7 +1,4 @@
 /** @format */
-
-import React from "react";
-
 import { AiFillHome, AiOutlineFlag } from "react-icons/ai";
 import { MdLocalFireDepartment, MdLiveTv } from "react-icons/md";
 import { CgMusicNote } from "react-icons/cg";
@@ -12,7 +9,7 @@ import { GiDiamondTrophy, GiEclipse } from "react-icons/gi";
 import { RiLightbulbLine, RiFeedbackLine } from "react-icons/ri";
 import { FiSettings, FiHelpCircle } from "react-icons/fi";
 
-export const categories = [
+export const categoriesList = [
   { name: "New", icon: <AiFillHome />, type: "home" },
   { name: "Trending", icon: <MdLocalFireDepartment />, type: "category" },
   { name: "Music", icon: <CgMusicNote />, type: "category" },

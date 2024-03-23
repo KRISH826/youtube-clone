@@ -9,19 +9,17 @@ import VideoDetails from "./pages/VideoDetails";
 import Sidebar from "./components/Sidebar";
 
 function App() {
-  const location = useLocation();
+  const { pathname } = useLocation();
+  const pagename = pathname.split("/")?.filter(Boolean)?.[0];
   return (
     <>
       <div className='flex flex-col'>
         <Navbar />
         <div className='flex flex-row h-full'>
-          {(location.pathname === "/" || "/searchresult/searchQuery") && (
-            <Sidebar />
-          )}
+          {pagename !== "video" && <Sidebar />}
           <main
             className={`py-2 px-5 flex-1 ${
-              (location.pathname === "/" || "/searchresult/searchQuery") &&
-              "pl-[250px]"
+              pagename !== "video" && "pl-[250px]"
             }`}>
             <Routes>
               <Route path='/' element={<Feed />} />
